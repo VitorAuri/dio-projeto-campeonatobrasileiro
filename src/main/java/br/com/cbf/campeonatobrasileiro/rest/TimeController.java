@@ -24,4 +24,8 @@ public class TimeController {
         timeService.inserir(time);
     }
 
+    @DeleteMapping
+    public void removerTime(@RequestBody Time time) {
+        timeService.remover(time);
+    }
 }

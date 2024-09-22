@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class TimeService implements ServiceInterface {
+public class TimeService implements ServiceInterface<Time> {
 
     @Autowired
     private TimeRepository timeRepository;
@@ -25,13 +25,20 @@ public class TimeService implements ServiceInterface {
     }
 
     @Override
-    public void removerPorNome(Time timeParaRemover) {
+    public void remover(Time timeParaRemoverPorNome) {
         List<Time> listaDeTimes = timeRepository.findAll();
+        boolean timeFoiRemovido = false;
         for(Time time : listaDeTimes) {
-            if(time.equals(timeParaRemover)) {
+            if(time.getNome().equalsIgnoreCase(timeParaRemoverPorNome.getNome())) {
                 timeRepository.delete(time);
+                timeFoiRemovido = true;
+                System.out.println("Time removido com sucesso.");
+                break;
             }
         }
+        if(!timeFoiRemovido) System.out.println("Time não existe com nome informado.");
     }
+
+
 
 }
