@@ -1,7 +1,7 @@
-package br.com.cbf.campeonatobrasileiro.controller;
+package br.com.cbf.campeonatobrasileiro.rest;
 
-import br.com.cbf.campeonatobrasileiro.model.Time;
-import br.com.cbf.campeonatobrasileiro.service.TimeService;
+import br.com.cbf.campeonatobrasileiro.entity.Time;
+import br.com.cbf.campeonatobrasileiro.service.implementation.TimeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

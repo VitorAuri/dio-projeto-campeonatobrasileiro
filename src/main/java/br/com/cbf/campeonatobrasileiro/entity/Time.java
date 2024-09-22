@@ -1,4 +1,4 @@
-package br.com.cbf.campeonatobrasileiro.model;
+package br.com.cbf.campeonatobrasileiro.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

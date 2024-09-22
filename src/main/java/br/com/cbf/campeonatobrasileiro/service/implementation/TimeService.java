@@ -1,15 +1,15 @@
-package br.com.cbf.campeonatobrasileiro.service.impl;
+package br.com.cbf.campeonatobrasileiro.service.implementation;
 
-import br.com.cbf.campeonatobrasileiro.model.Time;
-import br.com.cbf.campeonatobrasileiro.model.TimeRepository;
-import br.com.cbf.campeonatobrasileiro.service.TimeService;
+import br.com.cbf.campeonatobrasileiro.entity.Time;
+import br.com.cbf.campeonatobrasileiro.repository.TimeRepository;
+import br.com.cbf.campeonatobrasileiro.service.ServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class TimeServiceImpl implements TimeService {
+public class TimeService implements ServiceInterface {
 
     @Autowired
     private TimeRepository timeRepository;

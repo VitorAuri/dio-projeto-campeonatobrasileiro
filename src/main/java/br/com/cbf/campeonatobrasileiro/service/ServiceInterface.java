@@ -1,8 +1,8 @@
 package br.com.cbf.campeonatobrasileiro.service;
 
-import br.com.cbf.campeonatobrasileiro.model.Time;
+import br.com.cbf.campeonatobrasileiro.entity.Time;
 
-public interface TimeService {
+public interface ServiceInterface {
     Iterable<Time> buscarTodos();
 
     void inserir(Time time);
